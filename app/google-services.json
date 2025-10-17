@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "839237092919",
+    "project_id": "afyatrack-22b51",
+    "storage_bucket": "afyatrack-22b51.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:839237092919:android:8c61f6a2a9c8bc5c4921b2",
+        "android_client_info": {
+          "package_name": "com.example.afyatrack"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5tetxzBUDDxoUDeNoMlr6wn5apCMJX8g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
