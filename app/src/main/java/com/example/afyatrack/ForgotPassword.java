@@ -6,6 +6,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,6 +23,7 @@ public class ForgotPassword extends AppCompatActivity {
     private Button btnResetPassword;
     private TextView tvBackToLogin;
     private ProgressBar progressBar;
+    private ImageView backButton;
 
     private FirebaseAuth mAuth;
 
@@ -38,11 +40,16 @@ public class ForgotPassword extends AppCompatActivity {
         btnResetPassword = findViewById(R.id.btnResetPassword);
         tvBackToLogin = findViewById(R.id.tvBackToLogin);
         progressBar = findViewById(R.id.progressBar);
-
+        backButton = findViewById(R.id.backButton);
         // Set click listeners
         btnResetPassword.setOnClickListener(v -> resetPassword());
 
         tvBackToLogin.setOnClickListener(v -> {
+            startActivity(new Intent(ForgotPassword.this, MainActivity.class));
+            finish();
+        });
+
+        backButton.setOnClickListener(v -> {
             startActivity(new Intent(ForgotPassword.this, MainActivity.class));
             finish();
         });

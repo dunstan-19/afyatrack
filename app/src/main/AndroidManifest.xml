@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/a"
+        android:icon="@drawable/icon_vaccine"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/a"
+        android:roundIcon="@drawable/icon_vaccine"
         android:supportsRtl="true"
         android:theme="@style/Theme.AfyaTrack"
         tools:targetApi="31">
+        <activity
+            android:name=".ChildVaccineActivity"
+            android:exported="false" />
         <activity
             android:name=".ForgotPassword"
             android:exported="false" />
@@ -21,8 +26,6 @@
         <activity
             android:name=".RegisterrActivity"
             android:exported="false" />
-
-
         <activity
             android:name=".MainActivity"
             android:exported="true">

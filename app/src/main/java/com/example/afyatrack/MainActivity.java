@@ -82,14 +82,14 @@ public class MainActivity extends AppCompatActivity {
 
     private void showPassword() {
         etPassword.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
-        ivTogglePassword.setImageResource(R.drawable.eyeopen);
+        ivTogglePassword.setImageResource(R.drawable.openeye);
         passwordShowing = true;
         etPassword.setSelection(etPassword.length());
     }
 
     private void hidePassword() {
         etPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-        ivTogglePassword.setImageResource(R.drawable.eyeclosed);
+        ivTogglePassword.setImageResource(R.drawable.closedeye);
         passwordShowing = false;
         etPassword.setSelection(etPassword.length());
     }

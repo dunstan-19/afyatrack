@@ -7,7 +7,7 @@
     <color name="blue">#06769c</color>
     <color name="lightyellow">#f8ffe5</color>
     <color name="emerald">#06d6a0</color>
-
+    <color name="transparent">#00000000</color>
 
         <color name="purple_200">#FFBB86FC</color>
         <color name="purple_500">#FF6200EE</color>

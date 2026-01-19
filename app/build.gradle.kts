@@ -40,6 +40,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.constraintlayout)
     implementation(libs.firebase.auth)
+    implementation ("com.google.android.material:material:1.9.0")
     implementation ("com.google.android.gms:play-services-auth:20.7.0")
     implementation ("androidx.activity:activity:1.9.3")
     implementation ("com.google.firebase:firebase-auth:22.3.1")

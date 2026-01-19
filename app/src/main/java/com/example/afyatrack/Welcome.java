@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -31,7 +32,7 @@ public class Welcome extends AppCompatActivity implements NavigationView.OnNavig
     private LinearLayout dotContainer;
     private Handler sliderHandler = new Handler();
     private List<ViewPagerItem> viewPagerItems;
-
+private Button btn_child_vaccine;
     // Runnable for auto-sliding
     private Runnable sliderRunnable = new Runnable() {
         @Override
@@ -54,6 +55,13 @@ public class Welcome extends AppCompatActivity implements NavigationView.OnNavig
         navigationView = findViewById(R.id.nav_view);
         viewPager = findViewById(R.id.viewPager);
         dotContainer = findViewById(R.id.dotContainer);
+        btn_child_vaccine = findViewById(R.id.btn_child_vaccine);
+
+        btn_child_vaccine.setOnClickListener(v -> {
+            Intent intent = new Intent(Welcome.this, ChildVaccineActivity.class);
+            startActivity(intent);
+
+        });
 
         // Set up toolbar
         com.google.android.material.appbar.MaterialToolbar toolbar = findViewById(R.id.toolbar);
@@ -224,9 +232,11 @@ public class Welcome extends AppCompatActivity implements NavigationView.OnNavig
     private void openChildVaccination() {
         Toast.makeText(this, "Opening Child Vaccination", Toast.LENGTH_SHORT).show();
         // TODO: Start ChildVaccinationActivity
-        // Intent intent = new Intent(this, ChildVaccinationActivity.class);
-        // startActivity(intent);
+            Intent intent = new Intent(Welcome.this, ChildVaccineActivity.class);
+            startActivity(intent);
+            // Close the cover activity
     }
+
 
     private void openSettings() {
         Toast.makeText(this, "Opening Settings", Toast.LENGTH_SHORT).show();
