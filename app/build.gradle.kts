@@ -79,6 +79,7 @@ dependencies {
     implementation ("androidx.navigation:navigation-fragment-ktx:2.7.2")
     implementation ("androidx.navigation:navigation-ui-ktx:2.7.2")
     implementation(libs.firebase.database)
+    implementation(libs.firebase.crashlytics.buildtools)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)

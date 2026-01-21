@@ -29,4 +29,25 @@
         <!-- Background Colors -->
         <color name="background_light">#FAFAFA</color>
 
+
+
+    <!-- Vaccine Status Colors -->
+    <color name="primary_red">#FF3B30</color>
+    <color name="light_red">#FFE5E5</color>
+    <color name="primary_orange">#FF9500</color>
+    <color name="light_orange">#FFF4E5</color>
+    <color name="primary_green">#34C759</color>
+    <color name="light_green">#E5F7E5</color>
+    <color name="primary_yellow">#FFCC00</color>
+    <color name="light_yellow">#FFFCE5</color>
+    <color name="primary_blue">#007AFF</color>
+    <color name="light_blue">#E5F0FF</color>
+    <color name="primary_purple">#AF52DE</color>
+    <color name="light_purple">#F5E5FF</color>
+
+    <!-- Text Colors -->
+    <color name="text_pprimary">#1D1D1F</color>
+    <color name="text_ssecondary">#6E6E73</color>
+
+    <color name="light_grey">#F5F5F5</color>
 </resources>
