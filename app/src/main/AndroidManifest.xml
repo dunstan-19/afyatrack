@@ -15,6 +15,24 @@
         android:theme="@style/Theme.AfyaTrack"
         tools:targetApi="31">
         <activity
+            android:name=".ANCProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ANCNotificationsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ANCAppointmentsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ANCRecordsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AntenatalRegister"
+            android:exported="false" />
+        <activity
+            android:name=".AntenatalActivity"
+            android:exported="false" />
+        <activity
             android:name=".ChildProfile"
             android:exported="false" />
         <activity

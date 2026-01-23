@@ -80,6 +80,7 @@ dependencies {
     implementation ("androidx.navigation:navigation-ui-ktx:2.7.2")
     implementation(libs.firebase.database)
     implementation(libs.firebase.crashlytics.buildtools)
+    implementation(libs.gridlayout)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)

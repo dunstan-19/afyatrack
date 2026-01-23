@@ -97,6 +97,8 @@ public class RegisterrActivity extends AppCompatActivity {
     }
 
     private void registerUser(String username, String email, String password) {
+        btnSignup.setEnabled(false);
+        btnSignup.setText("Creating Account...");
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {

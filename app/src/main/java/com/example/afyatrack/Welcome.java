@@ -209,13 +209,17 @@ private Button btn_child_vaccine;
             drawerLayout.closeDrawer(GravityCompat.START);
             return true;
         } else if (id == R.id.nav_antenatal) {
-            openAntenatalCare();
+            startActivity(new Intent(this, AntenatalActivity.class));
+            return true;
         } else if (id == R.id.nav_child_vaccination) {
-            openChildVaccination();
+            startActivity(new Intent(this, ChildVaccineActivity.class));
+            return true;
         } else if (id == R.id.nav_settings) {
-            openSettings();
+            startActivity(new Intent(this, SettingsActivity.class));
+            return true;
         } else if (id == R.id.nav_help) {
-            openHelp();
+            startActivity(new Intent(this, HelpActivity.class));
+            return true;
         }
 
         drawerLayout.closeDrawer(GravityCompat.START);
@@ -224,9 +228,9 @@ private Button btn_child_vaccine;
 
     private void openAntenatalCare() {
         Toast.makeText(this, "Opening Antenatal Care", Toast.LENGTH_SHORT).show();
-        // TODO: Start AntenatalCareActivity
-        // Intent intent = new Intent(this, AntenatalCareActivity.class);
-        // startActivity(intent);
+
+        Intent intent = new Intent(this, AntenatalActivity.class);
+         startActivity(intent);
     }
 
     private void openChildVaccination() {
@@ -245,12 +249,7 @@ private Button btn_child_vaccine;
         // startActivity(intent);
     }
 
-    private void openHelp() {
-        Toast.makeText(this, "Opening Help", Toast.LENGTH_SHORT).show();
-        // TODO: Start HelpActivity
-        // Intent intent = new Intent(this, HelpActivity.class);
-        // startActivity(intent);
-    }
+
 
     @Override
     public void onBackPressed() {
