@@ -31,6 +31,7 @@ public class Welcome extends AppCompatActivity implements NavigationView.OnNavig
     private ViewPager2 viewPager;
     private LinearLayout dotContainer;
     private Handler sliderHandler = new Handler();
+    private ImageView btn_info;
     private List<ViewPagerItem> viewPagerItems;
 private Button btn_child_vaccine;
     // Runnable for auto-sliding
@@ -56,13 +57,18 @@ private Button btn_child_vaccine;
         viewPager = findViewById(R.id.viewPager);
         dotContainer = findViewById(R.id.dotContainer);
         btn_child_vaccine = findViewById(R.id.btn_child_vaccine);
+        btn_info = findViewById(R.id.btn_info);
 
         btn_child_vaccine.setOnClickListener(v -> {
             Intent intent = new Intent(Welcome.this, ChildVaccineActivity.class);
             startActivity(intent);
 
         });
+        btn_info.setOnClickListener(v -> {
+            Intent intent = new Intent(Welcome.this, HelpActivity.class);
+            startActivity(intent);
 
+        });
         // Set up toolbar
         com.google.android.material.appbar.MaterialToolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -76,15 +82,6 @@ private Button btn_child_vaccine;
         // Set navigation item selected listener
         navigationView.setNavigationItemSelectedListener(this);
 
-        // Set up profile icon click listener
-        ImageButton profileIcon = findViewById(R.id.profile_icon);
-        profileIcon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(Welcome.this, "Profile Clicked", Toast.LENGTH_SHORT).show();
-                // TODO: Open profile activity
-            }
-        });
 
         // Set up quick action buttons
         findViewById(R.id.btn_antenatal).setOnClickListener(new View.OnClickListener() {

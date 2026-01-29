@@ -22,37 +22,17 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/primary_emerald"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:titleTextColor="@color/white">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="AfyaTrack"
-                android:fontFamily="@font/merienda"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="bold" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageButton
-                    android:id="@+id/profile_icon"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginEnd="16dp"
-                    android:background="?attr/selectableItemBackgroundBorderless"
-                    android:src="@drawable/baseline_person_3_24"
-                    app:tint="@color/black"
-                    android:contentDescription="Profile"
-                    android:padding="8dp" />
-
-            </RelativeLayout>
-
+            <ImageView
+                android:id="@+id/btn_info"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/inffo"
+                android:layout_gravity="end"
+                android:padding="8dp"
+                 />
         </com.google.android.material.appbar.MaterialToolbar>
 
         <!-- Welcome Content -->
@@ -71,7 +51,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="AfyaTrack"
+                    android:text="MamaCare"
                     android:textColor="@color/text_primary"
                     android:textSize="28sp"
                     android:textStyle="bold"
@@ -122,7 +102,7 @@
 
                     </LinearLayout>
 
-                </com.google.android.material.card.MaterialCardView>-
+                </com.google.android.material.card.MaterialCardView>
 
                 <!-- Quick Action Cards -->
                 <com.google.android.material.card.MaterialCardView
