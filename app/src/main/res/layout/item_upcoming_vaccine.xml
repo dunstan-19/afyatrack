@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:layout_marginBottom="8dp"
+    android:padding="12dp"
+    android:background="@color/lightyellow">
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/vaccines_24px"
+        android:layout_marginEnd="12dp"
+        app:tint="@color/primary_blue" />
+
+    <TextView
+        android:id="@+id/tvVaccineName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Vaccine Name"
+        android:textColor="@color/text_primary"
+        android:textSize="14sp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSchedule"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:text="Schedule"
+        android:textSize="12sp"
+        android:textColor="@color/primary_blue"
+        app:backgroundTint="@color/transparent"
+        app:cornerRadius="8dp"
+        app:strokeColor="@color/emerald"
+        app:strokeWidth="1dp"/>
+
+</LinearLayout>

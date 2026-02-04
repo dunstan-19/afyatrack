@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/scrollView"
+    android:layout_height="match_parent"
+    android:background="@color/primary_light_yellow">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/primary_emerald"
+            app:titleTextColor="@color/white"
+            app:title="Registration"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Register Here"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/text_primary"/>
+
+        <LinearLayout
+            android:id="@+id/formContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp"
+                android:padding="20dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ANC Registration"
+                    android:textColor="@color/blue"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fill in your pregnancy details to get started"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:lineSpacingExtra="4dp" />
+            </LinearLayout>
+
+            <!-- Form Fields -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <!-- Names -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:boxStrokeColor="@color/emerald"
+                        app:boxStrokeWidth="1dp"
+                        app:errorEnabled="true"
+                        android:layout_marginBottom="12dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etName"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:hint="Your Name *"
+                            android:textColorHint="@color/text_secondary"
+                            android:inputType="textPersonName"
+                            android:maxLines="1"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Age -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilAge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:boxStrokeColor="@color/emerald"
+                        app:boxStrokeWidth="1dp"
+                        app:errorEnabled="true"
+                        android:layout_marginBottom="12dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etAge"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:hint="Age (12-55 years) *"
+                            android:textColorHint="@color/text_secondary"
+                            android:inputType="number"
+                            android:maxLength="2"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Phone Number -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:boxStrokeColor="@color/emerald"
+                        app:boxStrokeWidth="1dp"
+                        app:errorEnabled="true"
+                        android:layout_marginBottom="12dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtPhoneNumber"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:hint="Phone Number *"
+                            android:textColorHint="@color/text_secondary"
+                            android:inputType="phone"
+                            android:maxLength="15"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Emergency Contact -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilEmergency"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:boxStrokeColor="@color/emerald"
+                        app:boxStrokeWidth="1dp"
+                        app:errorEnabled="true"
+                        android:layout_marginBottom="12dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtEmergencyContact"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:hint="Emergency Contact *"
+                            android:textColorHint="@color/text_secondary"
+                            android:inputType="phone"
+                            android:maxLength="15"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Location -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:boxStrokeColor="@color/emerald"
+                        app:boxStrokeWidth="1dp"
+                        app:errorEnabled="true"
+                        android:layout_marginBottom="12dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtLocation"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:hint="Location/Address *"
+                            android:textColorHint="@color/text_secondary"
+                            android:inputType="textPostalAddress"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- LMP Date -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilLMP"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        app:hintTextColor="@color/text_primary"
+                        app:boxStrokeColor="@color/emerald"
+                        app:errorEnabled="true"
+                        app:endIconMode="custom"
+                        app:endIconDrawable="@drawable/calendar_clock_24px">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtLMP"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Last Menstrual Period (LMP) *"
+                            android:textColorHint="@color/text_secondary"
+                            android:inputType="none"
+                            android:focusable="false"
+                            android:clickable="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Calculate EDD Button -->
+                    <Button
+                        android:id="@+id/btnCalculateEDD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:backgroundTint="@color/primary_blue"
+                        android:text="Calculate EDD &amp; Weeks"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- Pregnancy Progress -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="16dp"
+                        android:padding="12dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/tvWeeksPregnant"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Weeks pregnant will be calculated here"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="8dp" />
+
+                        <TextView
+                            android:id="@+id/tvTrimester"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textAlignment="center"
+                            android:textSize="14sp"
+                            android:textColor="@color/primary_emerald"
+                            android:layout_marginBottom="12dp"
+                            android:visibility="gone"/>
+
+                        <ProgressBar
+                            android:id="@+id/pregnancyProgress"
+                            style="@android:style/Widget.ProgressBar.Horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="8dp"
+                            android:max="100"
+                            android:progress="0"
+                            android:progressDrawable="@drawable/progress_bar_style"/>
+                    </LinearLayout>
+
+                    <!-- EDD Date -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        app:hintTextColor="@color/text_primary"
+                        app:boxStrokeColor="@color/emerald"
+                        app:endIconMode="custom"
+                        app:endIconDrawable="@drawable/calendar_clock_24px">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtEDD"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Expected Due Date (EDD)"
+                            android:textColorHint="@color/text_secondary"
+                            android:inputType="none"
+                            android:focusable="false"
+                            android:clickable="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Blood Group -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilBloodGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        app:hintTextColor="@color/text_primary"
+                        app:boxStrokeColor="@color/emerald"
+                        app:errorEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtBloodGroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Blood Group (e.g., O+, A-) *"
+                            android:textColorHint="@color/text_secondary"
+                            android:inputType="text"
+                            android:maxLength="3"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Previous Complications -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:hintTextColor="@color/text_primary"
+                        app:boxStrokeColor="@color/emerald">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtPrevComplications"
+                            android:layout_width="match_parent"
+                            android:hint="Previous Pregnancy Complications"
+                            android:textColorHint="@color/text_secondary"
+                            android:layout_height="wrap_content"
+                            android:lines="3"
+                            android:maxLines="3"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Action Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:id="@+id/btnCancel"
+                    android:text="Cancel"
+                    app:cornerRadius="24dp"
+                    app:iconGravity="textStart"
+                    android:layout_marginEnd="8dp"
+                    app:backgroundTint="@color/primary_red"
+                    android:textColor="@color/white"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:id="@+id/btnRegister"
+                    android:text="Register"
+                    app:cornerRadius="24dp"
+                    app:iconGravity="textStart"
+                    android:layout_marginStart="8dp"
+                    app:backgroundTint="@color/emerald"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <!-- Progress Bar -->
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:visibility="gone" />
+
+            <!-- Footer Note -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Your information is secure and will help provide better care during your pregnancy journey."
+                android:textAlignment="center"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp"
+                android:lineSpacingExtra="4dp"
+                android:padding="16dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

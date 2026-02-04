@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_digital_records"
+        android:icon="@drawable/desktop_mac_24px"
+        android:title="Records" />
+
+    <item
+        android:id="@+id/nav_appointment"
+        android:icon="@drawable/calendar_clock_24px"
+        android:title="Appointment" />
+
+    <item
+        android:id="@+id/nav_dashboardd"
+        android:icon="@drawable/dashboard_24px"
+        android:title="Dashboard" />
+
+    <item
+        android:id="@+id/nav_notifications"
+        android:icon="@drawable/red_dot"
+    android:title="Notifications" />
+
+
+    <item
+        android:id="@+id/nav_child_profile"
+        android:icon="@drawable/account_child_24px"
+        android:title="Profile" />
+</menu>

@@ -85,4 +85,8 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+//pfd libraries
+    implementation ("com.itextpdf:itext7-core:7.2.5")
+    // If you get errors, try this instead:
+     implementation ("com.itextpdf:itextg:5.5.10")
 }

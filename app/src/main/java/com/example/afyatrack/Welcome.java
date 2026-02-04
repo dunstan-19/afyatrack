@@ -241,9 +241,9 @@ private Button btn_child_vaccine;
 
     private void openSettings() {
         Toast.makeText(this, "Opening Settings", Toast.LENGTH_SHORT).show();
-        // TODO: Start SettingsActivity
-        // Intent intent = new Intent(this, SettingsActivity.class);
-        // startActivity(intent);
+
+         Intent intent = new Intent(this, SettingsActivity.class);
+        startActivity(intent);
     }
 
 

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- DatePickerDialog Theme -->
+    <style name="DatePickerDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">#2196F3</item>
+        <item name="android:textColorPrimary">#000000</item>
+        <item name="android:textColorSecondary">#666666</item>
+        <item name="android:buttonBarButtonStyle">@style/DatePickerButtonStyle</item>
+    </style>
+
+    <style name="DatePickerButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">#000000</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+</resources>

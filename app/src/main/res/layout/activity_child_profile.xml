@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/primary_light_yellow">
+
+    <!-- Toolbar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary_emerald"
+        app:titleTextColor="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Back Button -->
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/baseline_arrow_back_ios_24"
+                android:contentDescription="Back"
+                android:padding="8dp"
+                app:tint="@color/white" />
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Child Profile"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <!-- Edit/Save Button -->
+            <ImageButton
+                android:id="@+id/btn_edit_save"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/baseline_edit_24"
+                android:contentDescription="Edit Profile"
+                android:padding="8dp"
+                app:tint="@color/white" />
+        </RelativeLayout>
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Profile Header Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="8dp"
+                android:layout_marginBottom="20dp"
+                app:strokeColor="@color/primary_emerald"
+                app:strokeWidth="2dp">
+
+                <LinearLayout
+                    android:padding="24dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <!-- Profile Picture -->
+                    <ImageView
+                        android:id="@+id/img_child_avatar"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/circle_background_primary"
+                        android:padding="8dp"/>
+
+                    <!-- Child Name -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/name_input_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Child Name"
+                        app:counterEnabled="false"
+                        app:counterMaxLength="50"
+                        android:visibility="gone">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_child_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:inputType="textCapWords"
+                            android:textSize="20sp"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/tv_child_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Child Name"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"/>
+
+                    <!-- Age Badge -->
+                    <TextView
+                        android:id="@+id/tv_age_badge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/badge_background"
+                        android:paddingHorizontal="16dp"
+                        android:paddingVertical="6dp"
+                        android:text="5 years"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Personal Information Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Personal Information"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Personal Info Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="20dp"
+                app:cardBackgroundColor="@color/white">
+
+                <LinearLayout
+                    android:padding="20dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!-- Date of Birth -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="16dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/calendar_clock_24px"
+                            android:layout_marginEnd="12dp"
+                            app:tint="@color/primary_emerald" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Date of Birth"
+                                android:textSize="12sp"
+                                android:textColor="@color/text_secondary"/>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/dob_input_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Date of Birth"
+                                android:visibility="gone">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/et_dob"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="1"
+                                    android:inputType="date"/>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:id="@+id/tv_dob"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="01 Jan 2020"
+                                android:textSize="16sp"
+                                android:textColor="@color/text_primary"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Gender -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="16dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/gender"
+                            android:layout_marginEnd="12dp"
+                            app:tint="@color/primary_emerald" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Gender"
+                                android:textSize="12sp"
+                                android:textColor="@color/text_secondary"/>
+
+                            <androidx.appcompat.widget.AppCompatSpinner
+                                android:id="@+id/spinner_gender"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/spinner_background"
+                                android:visibility="gone"/>
+
+                            <TextView
+                                android:id="@+id/tv_gender"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Male"
+                                android:textSize="16sp"
+                                android:textColor="@color/text_primary"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Birth Weight -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="16dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/weight"
+                            android:layout_marginEnd="12dp"
+                            app:tint="@color/primary_emerald" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Birth Weight"
+                                android:textSize="12sp"
+                                android:textColor="@color/text_secondary"/>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/weight_input_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Birth Weight (kg)"
+                                android:visibility="gone">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/et_birth_weight"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="1"
+                                    android:inputType="numberDecimal"/>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:id="@+id/tv_birth_weight"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="3.2 kg"
+                                android:textSize="16sp"
+                                android:textColor="@color/text_primary"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Place of Birth -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/baseline_add_location_24"
+                            android:layout_marginEnd="12dp"
+                            app:tint="@color/primary_emerald" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Place of Birth"
+                                android:textSize="12sp"
+                                android:textColor="@color/text_secondary"/>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/birth_place_input_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Place of Birth"
+                                android:visibility="gone">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/et_birth_place"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="2"/>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:id="@+id/tv_birth_place"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="City Hospital"
+                                android:textSize="16sp"
+                                android:textColor="@color/text_primary"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Health Information Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Health Information"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Health Info Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="20dp"
+                app:cardBackgroundColor="@color/white">
+
+                <LinearLayout
+                    android:padding="20dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!-- Health Conditions -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="16dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/baseline_health_and_safety_24"
+                            android:layout_marginEnd="12dp"
+                            app:tint="@color/primary_emerald" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Health Conditions"
+                                android:textSize="12sp"
+                                android:textColor="@color/text_secondary"/>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/health_conditions_input_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Health Conditions"
+                                android:visibility="gone">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/et_health_conditions"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="3"/>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:id="@+id/tv_health_conditions"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="None reported"
+                                android:textSize="16sp"
+                                android:textColor="@color/text_primary"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Contact Information Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact Information"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Contact Info Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="20dp"
+                app:cardBackgroundColor="@color/white">
+
+                <LinearLayout
+                    android:padding="20dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!-- Parent Name -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="16dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/baseline_person_pin_24"
+                            android:layout_marginEnd="12dp"
+                            app:tint="@color/primary_emerald" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Parent/Guardian"
+                                android:textSize="12sp"
+                                android:textColor="@color/text_secondary"/>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/parent_name_input_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Parent/Guardian Name"
+                                android:visibility="gone">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/et_parent_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="1"
+                                    android:inputType="textCapWords"/>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:id="@+id/tv_parent_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Parent Name"
+                                android:textSize="16sp"
+                                android:textColor="@color/text_primary"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Phone Number -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="16dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/baseline_perm_phone_msg_24"
+                            android:layout_marginEnd="12dp"
+                            app:tint="@color/primary_emerald" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Contact Number"
+                                android:textSize="12sp"
+                                android:textColor="@color/text_secondary"/>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/phone_input_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Contact Number"
+                                android:visibility="gone">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/et_phone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="1"
+                                    android:inputType="phone"/>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:id="@+id/tv_phone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="+1234567890"
+                                android:textSize="16sp"
+                                android:textColor="@color/text_primary"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Action Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="24dp">
+
+                <!-- Edit/Save Profile Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_edit_save_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Edit Profile"
+                    app:cornerRadius="24dp"
+                    app:iconGravity="textStart"
+                    app:iconPadding="8dp"
+                    android:paddingVertical="14dp"
+                    app:backgroundTint="@color/primary_emerald"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="12dp"/>
+
+                <!-- Sign Out Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_sign_out"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sign Out"
+                    app:cornerRadius="24dp"
+                    app:iconGravity="textStart"
+                    app:iconPadding="8dp"
+                    android:paddingVertical="14dp"
+                    app:backgroundTint="@color/primary_red"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="12dp"/>
+
+                <!-- Delete Child Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_delete_child"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Delete Profile"
+                    app:cornerRadius="24dp"
+                    app:iconGravity="textStart"
+                    app:iconPadding="8dp"
+                    android:paddingVertical="14dp"
+                    app:backgroundTint="@color/primary_red"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

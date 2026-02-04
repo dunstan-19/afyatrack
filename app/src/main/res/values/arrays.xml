@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="gender_array">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="appointment_types">
+        <item>Routine Checkup</item>
+        <item>Ultrasound Scan</item>
+        <item>Lab Tests</item>
+        <item>Consultation</item>
+        <item>Vaccination</item>
+        <item>Emergency</item>
+    </string-array>
+
+    <string-array name="appointment_status">
+        <item>Pending</item>
+        <item>Scheduled</item>
+        <item>Completed</item>
+        <item>Cancelled</item>
+        <item>Missed</item>
+    </string-array>
+    <string-array name="child_appointment_types">
+        <item>Routine Checkup</item>
+        <item>Vaccination</item>
+        <item>Growth Monitoring</item>
+        <item>Nutrition Consultation</item>
+        <item>Developmental Assessment</item>
+        <item>Specialist Consultation</item>
+        <item>Emergency Visit</item>
+        <item>Follow-up Visit</item>
+    </string-array>
+
+</resources>

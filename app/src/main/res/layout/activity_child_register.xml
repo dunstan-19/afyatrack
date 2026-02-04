@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/primary_light_yellow">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary_emerald"
+        app:titleTextColor="@color/white"
+        app:title="Child Registration"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Register Your Child"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/text_primary"/>
+
+    <!-- Child Name -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/etChildName"
+          android:layout_height="match_parent"
+          android:layout_width="match_parent"
+          android:hint="Child Name"
+          android:inputType="textPersonName"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Gender -->
+    <RadioGroup
+        android:id="@+id/rgGender"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:textColor="@color/emerald"
+        android:layout_marginStart="20dp"
+        android:layout_height="wrap_content">
+
+      <RadioButton
+          android:layout_height="wrap_content"
+          android:layout_width="wrap_content"
+          android:id="@+id/rbMale"
+
+          android:text="Male"/>
+
+      <RadioButton
+          android:layout_height="wrap_content"
+          android:layout_width="wrap_content"
+          android:id="@+id/rbFemale"
+          android:text="Female"/>
+    </RadioGroup>
+
+    <!-- Date of Birth -->
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Date of Birth"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"/>
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:datePickerMode="spinner"
+        android:calendarViewShown="false"/>
+
+    <!-- Birth Weight -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_height="wrap_content">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/etBirthWeight"
+          android:layout_height="match_parent"
+          android:layout_width="match_parent"
+          android:hint="Birth Weight (kg)"
+          android:inputType="numberDecimal"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Birth Place-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_height="wrap_content">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/etBirthPlace"
+          android:layout_height="match_parent"
+          android:layout_width="match_parent"
+          android:hint="Place of Birth"
+          android:inputType="textPersonName"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Health Conditions-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_height="wrap_content">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/etHealthCondition"
+          android:layout_height="match_parent"
+          android:layout_width="match_parent"
+          android:hint="Health Condition"
+          android:inputType="textPersonName"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+<!--Guardian Name -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_height="wrap_content">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/etGuardianName"
+          android:layout_height="match_parent"
+          android:layout_width="match_parent"
+          android:hint="Guardian Name"
+          android:inputType="textPersonName"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Guardian Contact -->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_height="wrap_content">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/etGuardianContact"
+          android:layout_height="match_parent"
+          android:layout_width="match_parent"
+          android:hint="Guardian Contact"
+          android:inputType="phone"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/btnSaveChild"
+        android:layout_marginTop="24dp"
+        android:text="Save Child"
+        android:backgroundTint="@color/primary_emerald"
+        android:textColor="@color/white"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+  </LinearLayout>
+</ScrollView>
